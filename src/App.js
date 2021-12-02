@@ -158,7 +158,8 @@ function App() {
                       }
                       alt="icon"
                     ></img>
-                    <span>{Math.floor(each.main.temp - 273.15)} °C</span>
+                    {!temp && <span>{Math.floor(each.main.temp - 273.15)} °C</span>}
+                    {temp && <span>{Math.floor(((each.main.temp - 273.15) * 9) / 5 + 32)} °F</span>}
                   </div>
                   <div>
                     <ul>
